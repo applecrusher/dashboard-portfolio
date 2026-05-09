@@ -1,0 +1,8 @@
+AXWindow name=Tableau Public - Book1 pos=55,30 size=1266x1320
+  ?role
+  AXButton name=missing value pos=63,37 size=12x14
+  AXButton name=missing value pos=103,37 size=12x14
+    AXGroup name=missing value pos=102,36 size=14x16
+  AXButton name=missing value pos=83,37 size=12x14
+  AXStaticText name=Tableau Public - Book1 pos=613,35 size=150x16
+

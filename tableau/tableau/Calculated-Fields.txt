@@ -1,0 +1,33 @@
+// Tableau calculated fields
+
+// Year Quarter
+STR(YEAR([quarter_start])) + " Q" + STR(DATEPART('quarter', [quarter_start]))
+
+// Latest Quarter Flag
+[quarter_start] = { FIXED : MAX([quarter_start]) }
+
+// Prior Quarter
+DATEADD('quarter', -1, { FIXED : MAX([quarter_start]) })
+
+// Latest Value
+IF [Latest Quarter Flag] THEN [value] END
+
+// Latest Nonblank Quarter For Selected Mark
+{ FIXED [metric], [submetric] : MAX(IF NOT ISNULL([value]) THEN [quarter_start] END) }
+
+// Latest Nonblank Value
+IF [quarter_start] = [Latest Nonblank Quarter For Selected Mark] THEN [value] END
+
+// Topic Sort
+CASE [topic]
+WHEN "Births & maternal/infant health" THEN 1
+WHEN "Infant mortality" THEN 2
+WHEN "Deaths & mortality" THEN 3
+ELSE 9
+END
+
+// Display Label
+IF [display] = "Percent" THEN STR(ROUND([value], 1)) + "%"
+ELSEIF [display] = "per 1,000 live births" THEN STR(ROUND([value], 2)) + " per 1,000"
+ELSE STR(INT([value]))
+END

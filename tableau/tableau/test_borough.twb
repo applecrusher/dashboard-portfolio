@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<workbook original-version='18.1' source-build='2026.1.0 (20261.26.0410.0924)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <preferences><preference name='ui.encoding.shelf.height' value='24' /><preference name='ui.shelf.height' value='26' /></preferences>
+  <datasources>
+    <datasource caption='latest_births_by_borough' inline='true' name='federated.borough' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='latest_births_by_borough' name='textscan.borough'>
+            <connection class='textscan' directory='/Users/openclaw/.openclaw/workspace/projects/nyc-vital-records-bi/tableau/portfolio-data' filename='02_latest_births_by_borough.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.borough' name='02_latest_births_by_borough.csv' table='[02_latest_births_by_borough#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='date' name='quarter_start' ordinal='0' />
+            <column datatype='string' name='borough' ordinal='1' />
+            <column datatype='integer' name='births' ordinal='2' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'><remote-name /><remote-type>0</remote-type><parent-name>[02_latest_births_by_borough.csv]</parent-name><remote-alias /><aggregation>Count</aggregation><contains-null>true</contains-null></metadata-record>
+          <metadata-record class='column'><remote-name>quarter_start</remote-name><remote-type>7</remote-type><local-name>[quarter_start]</local-name><parent-name>[02_latest_births_by_borough.csv]</parent-name><remote-alias>quarter_start</remote-alias><ordinal>0</ordinal><local-type>date</local-type><aggregation>Year</aggregation><contains-null>true</contains-null></metadata-record>
+          <metadata-record class='column'><remote-name>borough</remote-name><remote-type>129</remote-type><local-name>[borough]</local-name><parent-name>[02_latest_births_by_borough.csv]</parent-name><remote-alias>borough</remote-alias><ordinal>1</ordinal><local-type>string</local-type><aggregation>Count</aggregation><contains-null>true</contains-null></metadata-record>
+          <metadata-record class='column'><remote-name>births</remote-name><remote-type>20</remote-type><local-name>[births]</local-name><parent-name>[02_latest_births_by_borough.csv]</parent-name><remote-alias>births</remote-alias><ordinal>2</ordinal><local-type>integer</local-type><aggregation>Sum</aggregation><contains-null>true</contains-null></metadata-record>
+        </metadata-records>
+      </connection>
+      <column datatype='date' name='[quarter_start]' role='dimension' type='ordinal' />
+      <column caption='Borough' datatype='string' name='[borough]' role='dimension' type='nominal' />
+      <column caption='Births' datatype='integer' name='[births]' role='measure' type='quantitative' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values><semantic-value key='[Country].[Name]' value='"United States"' /></semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Latest Births by Borough'>
+      <table>
+        <view>
+          <datasources><datasource caption='latest_births_by_borough' name='federated.borough' /></datasources>
+          <datasource-dependencies datasource='federated.borough'>
+            <column-instance column='[births]' derivation='Sum' name='[sum:births:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[borough]' derivation='None' name='[none:borough:nk]' pivot='key' type='nominal' />
+            <column caption='Borough' datatype='string' name='[borough]' role='dimension' type='nominal' />
+            <column caption='Births' datatype='integer' name='[births]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes><pane selection-relaxation-option='selection-relaxation-allow'><view><breakdown value='auto' /></view><mark class='Bar' /></pane></panes>
+        <rows>[federated.borough].[none:borough:nk]</rows>
+        <cols>[federated.borough].[sum:births:qk]</cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <dashboards><dashboard name='NYC Vital Signs Monitor'><style /><size maxheight='900' maxwidth='1200' minheight='900' minwidth='1200' /><zones /></dashboard></dashboards>
+  <windows source-height='51'>
+    <window class='worksheet' name='Latest Births by Borough'><cards><edge name='left'><strip size='160'><card type='pages' /><card type='filters' /><card type='marks' /></strip></edge><edge name='top'><strip size='2147483647'><card type='columns' /></strip><strip size='2147483647'><card type='rows' /></strip><strip size='31'><card type='title' /></strip></edge></cards><viewpoint /></window>
+    <window class='dashboard' maximized='true' name='NYC Vital Signs Monitor'><viewpoints /></window>
+  </windows>
+</workbook>

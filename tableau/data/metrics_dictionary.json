@@ -1,0 +1,201 @@
+{
+  "Births by birthweight": {
+    "topic": "Births & maternal/infant health",
+    "display": "Percent",
+    "submetrics": [
+      "Low",
+      "Normal",
+      "Very Low"
+    ]
+  },
+  "Births by borough": {
+    "topic": "Births & maternal/infant health",
+    "display": "Number",
+    "submetrics": [
+      "Bronx",
+      "Brooklyn",
+      "Manhattan",
+      "Non-NYC Residents",
+      "Queens",
+      "Staten Island"
+    ]
+  },
+  "Births by coverage": {
+    "topic": "Births & maternal/infant health",
+    "display": "Percent",
+    "submetrics": [
+      "Medicaid",
+      "Non-Medicaid"
+    ]
+  },
+  "Births by maternal age": {
+    "topic": "Births & maternal/infant health",
+    "display": "Number",
+    "submetrics": [
+      "20 to 29",
+      "30 to 39",
+      "40+",
+      "Under 20"
+    ]
+  },
+  "Births by maternal race/ethnicity": {
+    "topic": "Births & maternal/infant health",
+    "display": "Number",
+    "submetrics": [
+      "Asian/PI",
+      "Black",
+      "Hispanic",
+      "Other/Unknown",
+      "White"
+    ]
+  },
+  "Births by method": {
+    "topic": "Births & maternal/infant health",
+    "display": "Percent",
+    "submetrics": [
+      "Cesarean",
+      "VBAC",
+      "Vaginal"
+    ]
+  },
+  "Births by term": {
+    "topic": "Births & maternal/infant health",
+    "display": "Percent",
+    "submetrics": [
+      "Pre-term",
+      "Term",
+      "Very Pre-term"
+    ]
+  },
+  "Breastfed infants": {
+    "topic": "Births & maternal/infant health",
+    "display": "Percent",
+    "submetrics": [
+      "Breastfed infants"
+    ]
+  },
+  "Deaths by age": {
+    "topic": "Deaths & mortality",
+    "display": "Number",
+    "submetrics": [
+      "1 to 24",
+      "25 to 44",
+      "45 to 64",
+      "65 to 84",
+      "85+",
+      "Under 1"
+    ]
+  },
+  "Deaths by cause": {
+    "topic": "Deaths & mortality",
+    "display": "Number",
+    "submetrics": [
+      "Accidents",
+      "Alzheimer's",
+      "CLRD",
+      "COVID-19",
+      "Cancer",
+      "Cerebrovascular Disease",
+      "Chronic liver disease",
+      "Diabetes",
+      "Diseases of heart",
+      "Drug-related",
+      "Homicide",
+      "Hypertension",
+      "Influenza and pneumonia",
+      "Kidney disease",
+      "Septicemia",
+      "Suicide"
+    ]
+  },
+  "Deaths by race/ethnicity": {
+    "topic": "Deaths & mortality",
+    "display": "Number",
+    "submetrics": [
+      "Asian/PI",
+      "Black",
+      "Hispanic",
+      "Other/Unknown",
+      "White"
+    ]
+  },
+  "Deaths by sex": {
+    "topic": "Deaths & mortality",
+    "display": "Number",
+    "submetrics": [
+      "Female",
+      "Male"
+    ]
+  },
+  "IMR by age": {
+    "topic": "Infant mortality",
+    "display": "per 1,000 live births",
+    "submetrics": [
+      "Neonatal",
+      "Post-neonatal"
+    ]
+  },
+  "IMR by borough": {
+    "topic": "Infant mortality",
+    "display": "per 1,000 live births",
+    "submetrics": [
+      "Bronx",
+      "Brooklyn",
+      "Manhattan",
+      "Queens",
+      "Staten Island"
+    ]
+  },
+  "IMR by race/ethnicity": {
+    "topic": "Infant mortality",
+    "display": "per 1,000 live births",
+    "submetrics": [
+      "Asian/PI",
+      "Black",
+      "Hispanic",
+      "White"
+    ]
+  },
+  "Pre-pregnancy diabetes": {
+    "topic": "Births & maternal/infant health",
+    "display": "Percent",
+    "submetrics": [
+      "Pre-pregnancy diabetes"
+    ]
+  },
+  "Pre-pregnancy hypertension": {
+    "topic": "Births & maternal/infant health",
+    "display": "Percent",
+    "submetrics": [
+      "Pre-pregnancy hypertension"
+    ]
+  },
+  "Prenatal care in first trimester": {
+    "topic": "Births & maternal/infant health",
+    "display": "Percent",
+    "submetrics": [
+      "Prenatal care in first trimester"
+    ]
+  },
+  "Total IMR": {
+    "topic": "Infant mortality",
+    "display": "per 1,000 live births",
+    "submetrics": [
+      "Total"
+    ]
+  },
+  "Total births": {
+    "topic": "Births & maternal/infant health",
+    "display": "Number",
+    "submetrics": [
+      "Total"
+    ]
+  },
+  "Total deaths": {
+    "topic": "Deaths & mortality",
+    "display": "Number",
+    "submetrics": [
+      "Total"
+    ]
+  }
+}
